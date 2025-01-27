@@ -2,6 +2,7 @@ import Header from "../components/common/Header"
 import { motion } from "framer-motion"
 import StatCard from "../components/common/StatCard"
 import { BarChart2, ShoppingBag, Users, Zap } from "lucide-react"
+import SalesOverviewChart from "../components/overview/SalesOverviewChart"
 
 const OverviewPage = () => {
   return (
@@ -18,6 +19,10 @@ const OverviewPage = () => {
           <StatCard name="Total Products" icon={ShoppingBag} value="567" color="#ec4899"/>
           <StatCard name="Conversion Rate" icon={BarChart2} value="12.5%" color="#10b981"/>
         </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <SalesOverviewChart />
+        </div>
       </main>
     </div>
   )
