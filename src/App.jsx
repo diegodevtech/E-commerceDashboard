@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom"
+import OverviewPage from "./pages/OverviewPage"
+import ProductsPage from "./pages/ProductsPage"
 
 function App() {
 
