@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import OverviewPage from "./pages/OverviewPage"
 import ProductsPage from "./pages/ProductsPage"
+import { Sidebar } from "lucide-react"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 opacity-80"/>
         <div className="absolute inset-0 backdrop-blur-sm"/>
       </div>
+      <Sidebar />
       <Routes>
         <Route path="/" element={<OverviewPage/>} />
         <Route path="/products" element={<ProductsPage/>} />
