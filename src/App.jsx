@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import OverviewPage from "./pages/OverviewPage"
 import ProductsPage from "./pages/ProductsPage"
-import { Sidebar } from "lucide-react"
+import Sidebar from "./components/Sidebar"
 
 function App() {
 
