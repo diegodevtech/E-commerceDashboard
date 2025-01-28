@@ -43,7 +43,7 @@ const CategoryDistributionChart = () => {
             </Pie>
             <Tooltip 
               contentStyle={{
-                backgroundColor: '31,41,55,0.8',
+                backgroundColor: 'rgba(31,41,55,0.8)',
                 borderColor: '#4b5563'
               }}
               itemStyle={{ color: "#e5e7eb" }}
