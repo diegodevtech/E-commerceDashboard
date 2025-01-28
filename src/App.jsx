@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar"
 import UsersPage from "./pages/UsersPage"
 import SalesPage from "./pages/SalesPage"
 import OrdersPage from "./pages/OrdersPage"
+import AnalyticsPage from "./pages/AnalyticsPage"
 
 function App() {
 

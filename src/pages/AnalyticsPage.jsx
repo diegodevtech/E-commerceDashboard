@@ -1,3 +1,10 @@
+import AIPoweredInsights from "../components/analytics/AIPoweredInsights";
+import ChannelPerformance from "../components/analytics/ChannelPerformance";
+import CustomerSegmentation from "../components/analytics/CustomerSegmentation";
+import OverviewCard from "../components/analytics/OverviewCard";
+import ProductPerformance from "../components/analytics/ProductPerformance";
+import RevenueChart from "../components/analytics/RevenueChart";
+import UserRetention from "../components/analytics/UserRetention";
 import Header from "../components/common/Header";
 
 const AnalyticsPage = () => {
