@@ -2,6 +2,9 @@ import Header from "../components/common/Header"
 import { motion } from "framer-motion"
 import StatCard from "../components/common/StatCard"
 import { AlertTriangle, DollarSign, Package, TrendingUp } from "lucide-react"
+import ProductTable from "../components/products/ProductTable"
+import CategoryDistributionChart from "../components/common/CategoryDistributionChart"
+import SalesTrendChart from "../components/products/SalesTrendChart"
 
 const ProductsPage = () => {
   return (
@@ -13,12 +16,21 @@ const ProductsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <StatCard name="Total Products" icon={Package} value="$1234" color="#6366f1"/>
+          <StatCard name="Total Products" icon={Package} value="1.234" color="#6366f1"/>
           <StatCard name="Top selling" icon={TrendingUp} value="89" color="#10b981"/>
           <StatCard name="Low Stock" icon={AlertTriangle} value="23" color="#f59e0b"/>
           <StatCard name="Total Revenue" icon={DollarSign} value="$543.210,00" color="#ef4444"/>
         </motion.div>
+        
+        <ProductTable />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <SalesTrendChart />
+          <CategoryDistributionChart />
+        </div>
+        
       </main>
+
     </div>
   )
 }
