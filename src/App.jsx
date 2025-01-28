@@ -4,6 +4,7 @@ import ProductsPage from "./pages/ProductsPage"
 import Sidebar from "./components/Sidebar"
 import UsersPage from "./pages/UsersPage"
 import SalesPage from "./pages/SalesPage"
+import OrdersPage from "./pages/OrdersPage"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/products" element={<ProductsPage/>} />
         <Route path='/users' element={<UsersPage />} />
         <Route path='/sales' element={<SalesPage />} />
+        <Route path='/orders' element={<OrdersPage />} />
       </Routes>
     </div>
   )
