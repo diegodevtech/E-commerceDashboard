@@ -1,29 +1,23 @@
-import { motion } from "framer-motion";
-import {
-    CartesianGrid,
-    Line,
-    LineChart,
-    ResponsiveContainer,
-    Tooltip,
-    XAxis,
-    YAxis,
-} from "recharts";
+import { motion } from 'framer-motion';
+import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+
 
 const salesData = [
-  { month: "Jan", sales: 100 },
-  { month: "Fev", sales: 200 },
-  { month: "Mar", sales: 300 },
-  { month: "Apr", sales: 400 },
-  { month: "May", sales: 500 },
-  { month: "Jun", sales: 600 },
+  { month: "Jan", sales: 500 },
+  { month: "Fev", sales: 400 },
+  { month: "Mar", sales: 600 },
+  { month: "Apr", sales: 100 },
+  { month: "May", sales: 200 },
+  { month: "Jun", sales: 300 },
   { month: "Jul", sales: 700 },
-  { month: "Aug", sales: 800 },
-  { month: "Sep", sales: 900 },
-  { month: "Oct", sales: 800 },
+  { month: "Aug", sales: 400 },
+  { month: "Sep", sales: 200 },
+  { month: "Oct", sales: 600 },
   // { month: "Nov", sales: 700 },
   // { month: "Dec", sales: 600 },
 ];
-const SalesOverviewChart = () => {
+
+const SalesTrendChart = () => {
   return (
     <motion.div
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700"
@@ -46,7 +40,7 @@ const SalesOverviewChart = () => {
               itemStyle={{ color: "#e5e7eb" }}
             />
             <Line
-              type={"monotone"}
+              type={"bump"}
               dataKey={"sales"}
               stroke="#6366f1"
               strokeWidth={3}
@@ -57,7 +51,7 @@ const SalesOverviewChart = () => {
         </ResponsiveContainer>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default SalesOverviewChart;
+export default SalesTrendChart
