@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SettingSection from "./SettingSection";
+import SettingsSection from "./SettingsSection";
 import { Bell } from "lucide-react";
 import ToggleSwitch from "./ToggleSwitch";
 
@@ -11,7 +11,7 @@ const Notifications = () => {
 	});
 
 	return (
-		<SettingSection icon={Bell} title={"Notifications"}>
+		<SettingsSection icon={Bell} title={"Notifications"}>
 			<ToggleSwitch
 				label={"Push Notifications"}
 				isOn={notifications.push}
@@ -27,7 +27,7 @@ const Notifications = () => {
 				isOn={notifications.sms}
 				onToggle={() => setNotifications({ ...notifications, sms: !notifications.sms })}
 			/>
-		</SettingSection>
+		</SettingsSection>
 	);
 };
 export default Notifications;

@@ -1,9 +1,9 @@
 import { User } from "lucide-react";
-import SettingSection from "./SettingSection";
+import SettingsSection from "./SettingsSection";
 
 const Profile = () => {
 	return (
-		<SettingSection icon={User} title={"Profile"}>
+		<SettingsSection icon={User} title={"Profile"}>
 			<div className='flex flex-col sm:flex-row items-center mb-6'>
 				<img
 					src='https://randomuser.me/api/portraits/men/3.jpg'
@@ -20,7 +20,7 @@ const Profile = () => {
 			<button className='bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition duration-200 w-full sm:w-auto'>
 				Edit Profile
 			</button>
-		</SettingSection>
+		</SettingsSection>
 	);
 };
 export default Profile;

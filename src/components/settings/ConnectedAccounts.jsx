@@ -1,22 +1,62 @@
-import Header from "../components/common/Header";
-import ConnectedAccounts from "../components/settings/ConnectedAccounts";
-import DangerZone from "../components/settings/DangerZone";
-import Notifications from "../components/settings/Notifications";
-import Profile from "../components/settings/Profile";
-import Security from "../components/settings/Security";
+import { useState } from "react";
+import SettingsSection from "./SettingsSection";
+import { HelpCircle, Plus } from "lucide-react";
 
-const SettingsPage = () => {
+const ConnectedAccounts = () => {
+	const [connectedAccounts, setConnectedAccounts] = useState([
+		{
+			id: 1,
+			name: "Google",
+			connected: true,
+			icon: "/google.png",
+		},
+		{
+			id: 2,
+			name: "Facebook",
+			connected: false,
+			icon: "/facebook.svg",
+		},
+		{
+			id: 3,
+			name: "Twitter",
+			connected: true,
+			icon: "/x.png",
+		},
+	]);
 	return (
-		<div className='flex-1 overflow-auto relative z-10 bg-gray-900'>
-			<Header title='Settings' />
-			<main className='max-w-4xl mx-auto py-6 px-4 lg:px-8'>
-				<Profile />
-				<Notifications />
-				<Security />
-				<ConnectedAccounts />
-				<DangerZone />
-			</main>
-		</div>
+		<SettingsSection icon={HelpCircle} title={"Connected Accounts"}>
+			{connectedAccounts.map((account) => (
+				<div key={account.id} className='flex items-center justify-between py-3'>
+					<div className='flex gap-1'>
+						<img src={account.icon} alt='Social img' className='size-6 object-cover rounded-full mr-2' />
+						<span className='text-gray-300'>{account.name}</span>
+					</div>
+					<button
+						className={`px-3 py-1 rounded ${
+							account.connected ? "bg-green-600 hover:bg-green-700" : "bg-gray-600 hover:bg-gray-700"
+						} transition duration-200`}
+						onClick={() => {
+							setConnectedAccounts(
+								connectedAccounts.map((acc) => {
+									if (acc.id === account.id) {
+										return {
+											...acc,
+											connected: !acc.connected,
+										};
+									}
+									return acc;
+								})
+							);
+						}}
+					>
+						{account.connected ? "Connected" : "Connect"}
+					</button>
+				</div>
+			))}
+			<button className='mt-4 flex items-center text-indigo-400 hover:text-indigo-300 transition duration-200'>
+				<Plus size={18} className='mr-2' /> Add Account
+			</button>
+		</SettingsSection>
 	);
 };
-export default SettingsPage;
+export default ConnectedAccounts;
