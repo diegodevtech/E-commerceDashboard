@@ -8,19 +8,19 @@ const ConnectedAccounts = () => {
 			id: 1,
 			name: "Google",
 			connected: true,
-			icon: "/google.png",
+			icon: "https://github.com/burakorkmez/react-admin-dashboard/blob/master/public/google.png?raw=true",
 		},
 		{
 			id: 2,
 			name: "Facebook",
 			connected: false,
-			icon: "/facebook.svg",
+			icon: "https://imgs.search.brave.com/_ESHqrMWEPDAPGUVjKM_TW5v5c5XZ5szqR8Lniw56o8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZs/YXRpY29uLmNvbS81/MTIvMTI0LzEyNDAx/MC5wbmc",
 		},
 		{
 			id: 3,
-			name: "Twitter",
+			name: "Github",
 			connected: true,
-			icon: "/x.png",
+			icon: "https://imgs.search.brave.com/ChKaCV4dvS-XpWwhnvk6XfJVKlJvOEF4WrHpEjyRrAM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC9naXRodWIt/aWNvbi01MTJ4NDk3/LW9wcHRocmUyLnBu/Zw",
 		},
 	]);
 	return (
