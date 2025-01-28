@@ -10,18 +10,18 @@ import {
 } from "recharts";
 
 const salesData = [
-  { month: "Jan", sales: 1000 },
-  { month: "Fev", sales: 2000 },
-  { month: "Mar", sales: 3000 },
-  { month: "Apr", sales: 4000 },
-  { month: "May", sales: 5000 },
-  { month: "Jun", sales: 6000 },
-  { month: "Jul", sales: 7000 },
-  { month: "Aug", sales: 8000 },
-  { month: "Sep", sales: 9000 },
-  { month: "Oct", sales: 1000 },
-  { month: "Nov", sales: 2000 },
-  { month: "Dec", sales: 3000 },
+  { month: "Jan", sales: 100 },
+  { month: "Fev", sales: 200 },
+  { month: "Mar", sales: 300 },
+  { month: "Apr", sales: 400 },
+  { month: "May", sales: 500 },
+  { month: "Jun", sales: 600 },
+  { month: "Jul", sales: 700 },
+  { month: "Aug", sales: 800 },
+  { month: "Sep", sales: 900 },
+  { month: "Oct", sales: 800 },
+  // { month: "Nov", sales: 700 },
+  // { month: "Dec", sales: 600 },
 ];
 const SalesOverviewChart = () => {
   return (
@@ -29,7 +29,7 @@ const SalesOverviewChart = () => {
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg roundex-xl p-6 border border-gray-700"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.2 }}
+      transition={{ delay: 0.2 }}
     >
       <h2 className="text-lg font-medium mb-4 text-gray-100">Sales Overview</h2>
       <div className="h-80">
