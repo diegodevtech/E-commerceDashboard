@@ -35,7 +35,7 @@ const OrdersTable = () => {
 		>
 			<div className='flex justify-between items-center mb-6'>
 				<h2 className='text-xl font-semibold text-gray-100'>Order List</h2>
-				<div className='relative'>
+				<div className='relative overflow-hidden'>
 					<input
 						type='text'
 						placeholder='Search orders...'
